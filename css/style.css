@@ -1,0 +1,17 @@
+:root {
+  --primary: #556dcd;
+}
+.name {
+  transition: all 0.3s ease;
+}
+.name:hover {
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+.nav-item.active {
+  color: white;
+  background-color: var(--primary);
+}
+.nav-item.active .nav-link {
+  color: white;
+}
