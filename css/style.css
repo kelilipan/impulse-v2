@@ -1,6 +1,7 @@
 :root {
   --primary: #556dcd;
   --mdc-theme-primary: #556dcd;
+  --mdc-theme-secondary: #556dcd;
 }
 .name {
   transition: all 0.3s ease;
@@ -45,4 +46,14 @@
 }
 .btn {
   border-radius: 3px;
+}
+.start-container:hover .minutes-center,
+.start-container:focus .minutes-center,
+.start-container:active .minutes-center {
+  display: block;
+}
+.minutes-center {
+  display: none;
+  right: 35px;
+  top: 35%;
 }
