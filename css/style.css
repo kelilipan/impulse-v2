@@ -1,5 +1,6 @@
 :root {
   --primary: #556dcd;
+  --mdc-theme-primary: #556dcd;
 }
 .name {
   transition: all 0.3s ease;
@@ -14,4 +15,16 @@
 }
 .nav-item.active .nav-link {
   color: white;
+}
+.sidebar .nav-item {
+  transition: all 0.2s ease;
+}
+.sidebar .nav-item:hover {
+  color: white;
+  background-color: var(--blue);
+  transition: all 0.2s ease;
+}
+.sidebar .nav-link:hover {
+  color: white;
+  transition: all 0.2s ease;
 }
