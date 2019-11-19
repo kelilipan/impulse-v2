@@ -28,3 +28,21 @@
   color: white;
   transition: all 0.2s ease;
 }
+.bg-login {
+  background: #ffffff url("/img/bg.svg") no-repeat center bottom;
+  background-position: center bottom -20px;
+  background-size: 100%;
+}
+
+@media (max-width: 992px) {
+  .bg-login {
+    background-size: 100%;
+  }
+}
+.navbar-brand img {
+  width: auto;
+  max-height: 50px;
+}
+.btn {
+  border-radius: 3px;
+}

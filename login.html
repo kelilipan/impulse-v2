@@ -13,69 +13,87 @@
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- Custom styles for this template-->
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-login">
+  <!-- Topbar -->
+  <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
+    <!-- Sidebar Toggle (Topbar) -->
+    <a class="navbar-brand d-flex align-items-center justify-content-center" href="/login.html">
+      <img src="/img/logo.png" alt="logo" class="w-auto">
+    </a>
+    <div class="ml-auto">
+
+      <b>Server time : <span id="time"></span></b>
+    </div>
+
+  </nav>
+  <!-- End of Topbar -->
   <div class="container">
-
     <!-- Outer Row -->
     <div class="row justify-content-center">
-
-      <div class="col-xl-10 col-lg-12 col-md-9">
-
-        <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="col col-md-6">
+        <div class="card o-hidden border-0 shadow-lg mb-3 mt-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-              <div class="col-lg-6">
+              <div class="col">
                 <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="h4 text-gray-900 mb-4"><strong>Login</strong></h1>
+                    <img src="/img/logo-iflab.png" alt="iflab" width='80px'>
                   </div>
-                  <form class="user">
-                    <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Remember Me</label>
+                  <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon w-100 mt-3">
+                    <i class="fas fa-user-circle mdc-text-field__icon"></i>
+                    <input type="text" id="username" class="mdc-text-field__input w-100">
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="tf-outlined" class="mdc-floating-label">Username</label>
                       </div>
+                      <div class="mdc-notched-outline__trailing"></div>
                     </div>
-                    <a href="index.html" class="btn btn-primary btn-user btn-block">
-                      Login
-                    </a>
-                    <hr>
-                    <a href="index.html" class="btn btn-google btn-user btn-block">
-                      <i class="fab fa-google fa-fw"></i> Login with Google
-                    </a>
-                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                      <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                    </a>
-                  </form>
-                  <hr>
-                  <div class="text-center">
-                    <a class="small" href="forgot-password.html">Forgot Password?</a>
                   </div>
-                  <div class="text-center">
-                    <a class="small" href="register.html">Create an Account!</a>
+                  <div
+                    class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon w-100 mt-3">
+                    <i class="fas fa-key  mdc-text-field__icon"></i>
+                    <i class="fas fa-eye  mdc-text-field__icon"></i>
+                    <input type="password" id="password" class="mdc-text-field__input w-100">
+                    <div class="mdc-notched-outline">
+                      <div class="mdc-notched-outline__leading"></div>
+                      <div class="mdc-notched-outline__notch">
+                        <label for="tf-outlined" class="mdc-floating-label">Password</label>
+                      </div>
+                      <div class="mdc-notched-outline__trailing"></div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mt-4 flex-wrap">
+                    <div class="text-center">
+                      <a href=" forgot-password.html">Forgot Password?</a>
+                    </div>
+                    <div>
+                      <p class="small mb-1">Login as :</p>
+                      <a href="/index.html" class="btn btn-primary">Student</a>
+                      <a href="/index.html" class="btn btn-primary">Assistant</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
+        <p class="text-center small">IMPULSE v2. copyright © 2019 Informatics Lab. all right reserved.</p>
       </div>
 
     </div>
@@ -91,6 +109,32 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('time').innerHTML =
+        h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+      return i;
+    }
+    $(document).ready(() => {
+      startTime()
+    })
+    const MDCTextField = mdc.textField.MDCTextField
+    // const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
+    const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+      return new MDCTextField(el);
+    });
+
+  </script>
 
 </body>
 
