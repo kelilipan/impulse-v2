@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IMPULSE</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="/css/countdown.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- <link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
+    <style>
+        a:hover {
+            text-decoration: none;
+        }
+
+        .action {
+            font-size: 2em;
+        }
+
+        td,
+        th {
+            text-align: center;
+            vertical-align: middle !important;
+            transition: 0.2s all ease;
+        }
+
+        td input {
+            width: 40px;
+        }
+
+        td:hover {
+            transition: 0.2s all ease;
+            background-color: #cecece;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-white sidebar accordion " id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center"
+                href="/pages/asprak_dashboard.html">
+                <img src="/img/logo.png" alt="logo" class="w-100">
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider mt-1">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="/pages/asprak_dashboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item ">
+                <a class="nav-link" href="/pages/asprak_task_input.html">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>Task input</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/pages/asprak_manage_score.html">
+                    <i class="fas fa-tasks"></i>
+                    <span>Manage score</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/pages/about.html">
+                    <i class="fas fa-question-circle"></i>
+                    <span>About</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <b>Server time : <span id="time"></span></b>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+
+                            <div class="topbar-divider d-none d-sm-block"></div>
+
+                            <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-inline text-gray-800 name">Febbihun</span><i
+                                    class="fas fa-chevron-down"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" id='logout-btn'>
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-8">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Manage score</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="table-responsive ">
+                                        <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Module</th>
+                                                    <th scope="col">Pre-test</th>
+                                                    <th scope="col">Journal</th>
+                                                    <th scope="col">Post-test</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">Manage</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">Module 1</th>
+                                                    <td>2</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td>6</td>
+                                                    <th scope="row">
+                                                        <a href="#" class="action" data-toggle="modal"
+                                                            data-target="#add-task">
+                                                            <i class="fas fa-plus-square"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal"
+                                                            data-target="#manage-task">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Module 2</th>
+                                                    <td>2</td>
+                                                    <td>5</td>
+                                                    <td>6</td>
+                                                    <td>6</td>
+                                                    <th>
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-plus-square"></i>
+                                                        </a>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2019</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="manage-task" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Manage module 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Add -->
+    <div class="modal fade" id="add-task" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add task module 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/vendor/CellEdit/js/dataTables.cellEdit.js"></script>
+    <!-- <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="/js/demo/datatables-demo.js"></script> -->
+    <!-- <script src="/vendor/chart.js/Chart.min.js"></script> -->
+
+    <!-- Page level custom scripts -->
+    <!-- <script src="/js/demo/chart-area-demo.js"></script> -->
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+        $(document).ready(() => {
+            startTime()
+        })
+
+        $('#logout-btn').click(() => {
+            Swal.fire({
+                title: 'Are you sure?',
+                // text: "You won't be able to revert this!",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, logout!'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = "/login.html";
+                }
+            })
+        })
+        const MDCSelect = mdc.select.MDCSelect
+        // const select = new MDCSelect(document.querySelector('.mdc-select'));
+        const select = [].map.call(document.querySelectorAll('.mdc-select'), function (el) {
+            return new MDCSelect(el);
+        })
+        const MDCTextField = mdc.textField.MDCTextField
+        const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+            return new MDCTextField(el);
+        });
+
+    </script>
+
+    <!-- Page level plugins -->
+    <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="/vendor/CellEdit/js/dataTables.cellEdit.js"></script>
+
+    <!-- Page level custom scripts -->
+    <!-- <script src="/js/demo/datatables-demo.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            var table = $("#dataTable").DataTable();
+            table.MakeCellsEditable({
+                "onUpdate": (updatedCell, updatedRow, oldValue) => {
+                    console.log("The new value for the cell is: " + updatedCell.data());
+                    console.log("The old value for that cell was: " + oldValue);
+                    console.log("The values for each cell in that row are: " + updatedRow.data());
+                }, 'columns': [1, 2, 3, 4]
+            });
+        });
+
+    </script>
+</body>
+
+</html>
