@@ -3,6 +3,17 @@ let progressBar = document.querySelector(".e-c-progress");
 let indicator = document.getElementById("e-indicator");
 let pointer = document.getElementById("e-pointer");
 let length = Math.PI * 2 * 100;
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'bottom-end',
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  onOpen: (toast) => {
+    toast.addEventListener('mouseenter', Swal.stopTimer)
+    toast.addEventListener('mouseleave', Swal.resumeTimer)
+  }
+})
 
 progressBar.style.strokeDasharray = length;
 
@@ -77,15 +88,10 @@ function timer(seconds) {
   }, 1000);
 }
 notifyStart = () => {
-  Swal.fire({
-    position: "bottom-end",
-    icon: "success",
-    backdrop: false,
-    text: "Practicum successfully started",
-    showConfirmButton: false,
-    timer: 1800,
-    timerProgressBar: true
-  });
+  Toast.fire({
+    icon: 'success',
+    title: 'Practicum successfully started'
+  })
 };
 function pauseTimer(event) {
   if (isStarted === false) {
