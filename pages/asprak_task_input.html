@@ -19,9 +19,12 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="/css/countdown.css">
     <link rel="stylesheet" href="/css/style.css">
+
     <!-- <link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
     <style>
         a:hover {
@@ -57,14 +60,14 @@
             <hr class="sidebar-divider mt-1">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/pages/asprak_dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/pages/asprak_task_input.html">
                     <i class="fas fa-clipboard-list"></i>
                     <span>Task input</span></a>
@@ -169,7 +172,8 @@
                                                     <td>6</td>
                                                     <td>6</td>
                                                     <td>
-                                                        <a href="#" class="action">
+                                                        <a href="#" class="action" data-toggle="modal"
+                                                            data-target="#add-task">
                                                             <i class="fas fa-plus-square"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal"
@@ -351,7 +355,28 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Manage module 1</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Add -->
+    <div class="modal fade" id="add-task" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add task module 1</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -425,6 +450,15 @@
                 }
             })
         })
+        const MDCSelect = mdc.select.MDCSelect
+        // const select = new MDCSelect(document.querySelector('.mdc-select'));
+        const select = [].map.call(document.querySelectorAll('.mdc-select'), function (el) {
+            return new MDCSelect(el);
+        })
+        const MDCTextField = mdc.textField.MDCTextField
+        const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+            return new MDCTextField(el);
+        });
     </script>
 
 </body>

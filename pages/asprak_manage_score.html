@@ -13,10 +13,16 @@
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="/css/countdown.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -34,6 +40,16 @@
         th {
             text-align: center;
             vertical-align: middle !important;
+            transition: 0.2s all ease;
+        }
+
+        td input {
+            width: 40px;
+        }
+
+        td:hover {
+            transition: 0.2s all ease;
+            background-color: #cecece;
         }
     </style>
 </head>
@@ -47,20 +63,24 @@
         <ul class="navbar-nav bg-white sidebar accordion " id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/pages/asprak_dashboard.html">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center"
+                href="/pages/asprak_dashboard.html">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
                 <img src="/img/logo.png" alt="logo" class="w-100">
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider mt-1">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+
+            <li class="nav-item">
                 <a class="nav-link" href="/pages/asprak_dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <!-- Nav Item - Charts -->
+
             <li class="nav-item">
                 <a class="nav-link" href="/pages/asprak_task_input.html">
                     <i class="fas fa-clipboard-list"></i>
@@ -68,7 +88,7 @@
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="/pages/asprak_manage_score.html">
                     <i class="fas fa-tasks"></i>
                     <span>Manage score</span></a>
@@ -110,11 +130,14 @@
 
                             <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-inline text-gray-800 name">Febbihun</span><i class="fas fa-chevron-down"></i>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-inline text-gray-800 name">Febbihun</span><i
+                                    class="fas fa-chevron-down"></i>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
@@ -185,6 +208,7 @@
                                         </select>
                                     </div>
                                 </div>
+
                                 <div class="card-body">
                                     <div class="table-responsive ">
                                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
@@ -197,6 +221,7 @@
                                                     <th scope="col">Jurnal</th>
                                                     <th scope="col">Tes Akhir</th>
                                                     <th scope="col">Jawaban</th>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -956,8 +981,31 @@
                 }
             })
         })
+        const MDCSelect = mdc.select.MDCSelect
+        // const select = new MDCSelect(document.querySelector('.mdc-select'));
+        const select = [].map.call(document.querySelectorAll('.mdc-select'), function (el) {
+            return new MDCSelect(el);
+        })
+        const MDCTextField = mdc.textField.MDCTextField
+        const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+            return new MDCTextField(el);
+        });
+
     </script>
 
+    <!-- Page level plugins -->
+    <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="/vendor/CellEdit/js/dataTables.cellEdit.js"></script>
+
+    <!-- Page level custom scripts -->
+    <!-- <script src="/js/demo/datatables-demo.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            var table = $("#dataTable").DataTable();
+        });
+
+    </script>
 </body>
 
 </html>
