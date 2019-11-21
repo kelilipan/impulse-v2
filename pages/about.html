@@ -18,8 +18,6 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
@@ -302,11 +300,7 @@
     <!-- Custom scripts for all pages-->
     <script src="/js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="/vendor/chart.js/Chart.min.js"></script>
-
     <!-- Page level custom scripts -->
-    <script src="/js/demo/chart-area-demo.js"></script>
     <script>
         function startTime() {
             var today = new Date();
@@ -326,13 +320,6 @@
         $(document).ready(() => {
             startTime()
         })
-        const MDCSelect = mdc.select.MDCSelect
-
-        const select = new MDCSelect(document.querySelector('.mdc-select'));
-
-        select.listen('MDCSelect:change', () => {
-            // alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
-        });
         $('#logout-btn').click(() => {
             Swal.fire({
                 title: 'Are you sure?',
