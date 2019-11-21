@@ -13,6 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
@@ -25,7 +26,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="/css/countdown.css">
     <link rel="stylesheet" href="/css/style.css">
-
     <!-- <link href="/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet"> -->
     <style>
         a:hover {
@@ -63,14 +63,16 @@
         <ul class="navbar-nav bg-white sidebar accordion " id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
+
             <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                href="/pages/asprak_dashboard.html">
+                href="/pages/asprak_dashboard.html">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
                 <img src="/img/logo.png" alt="logo" class="w-100">
             </a>
             <!-- Divider -->
             <hr class="sidebar-divider mt-1">
 
             <!-- Nav Item - Dashboard -->
+
             <li class="nav-item">
                 <a class="nav-link" href="/pages/asprak_dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -78,7 +80,8 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item ">
+
+            <li class="nav-item">
                 <a class="nav-link" href="/pages/asprak_task_input.html">
                     <i class="fas fa-clipboard-list"></i>
                     <span>Task input</span></a>
@@ -155,60 +158,719 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-xl-7 col-lg-8">
+                        <div class="col-lg-7">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Manage score</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Manage Score</h6>
                                 </div>
                                 <!-- Card Body -->
+                                <div class="card-list">
+                                    <div class="chooser">
+                                        <select class="form-control">
+                                            <option>Modul 1</option>
+                                            <option>Modul 2</option>
+                                            <option>Modul 3</option>
+                                            <option>Modul 4</option>
+                                            <option>Modul 5</option>
+                                            <option>Modul 6</option>
+                                            <option>Modul 7</option>
+                                            <option>Modul 8</option>
+                                            <option>Modul 9</option>
+                                            <option>Modul 10</option>
+                                        </select>
+                                    </div>
+                                    <div class="chooser">
+                                        <select class="form-control">
+                                            <option>Senin</option>
+                                            <option>Selasa</option>
+                                            <option>Rabu</option>
+                                            <option>Kamis</option>
+                                            <option>Jumat</option>
+                                            <option>Sabtu</option>
+                                        </select>
+                                    </div>
+                                    <div class="chooser">
+                                        <select class="form-control">
+                                            <option>IF-41-01</option>
+                                            <option>IF-41-02</option>
+                                            <option>IF-41-03</option>
+                                            <option>IF-41-04</option>
+                                            <option>IF-41-05</option>
+                                            <option>IF-41-06</option>
+                                            <option>IF-41-07</option>
+                                            <option>IF-41-08</option>
+                                            <option>IF-41-09</option>
+                                            <option>IF-41-10</option>
+                                            <option>IF-41-11</option>
+                                            <option>IF-41-12</option>
+                                            <option>IF-41-INT1</option>
+                                        </select>
+                                    </div>
+                                </div>
+
                                 <div class="card-body">
                                     <div class="table-responsive ">
                                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
-                                                <tr>
-                                                    <th scope="col">Module</th>
-                                                    <th scope="col">Pre-test</th>
-                                                    <th scope="col">Journal</th>
-                                                    <th scope="col">Post-test</th>
-                                                    <th scope="col">Total</th>
-                                                    <th scope="col">Manage</th>
+                                                <tr style="text-align: center;">
+                                                    <th scope="col">Action</th>
+                                                    <th scope="col">Praktikan</th>
+                                                    <th scope="col">Assistant</th>
+                                                    <th scope="col">Tes Awal</th>
+                                                    <th scope="col">Jurnal</th>
+                                                    <th scope="col">Tes Akhir</th>
+                                                    <th scope="col">Jawaban</th>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th scope="row">Module 1</th>
-                                                    <td>2</td>
-                                                    <td>5</td>
-                                                    <td>6</td>
-                                                    <td>6</td>
                                                     <th scope="row">
-                                                        <a href="#" class="action" data-toggle="modal"
-                                                            data-target="#add-task">
-                                                            <i class="fas fa-plus-square"></i>
-                                                        </a>
-                                                        <a href="#" class="action" data-toggle="modal"
-                                                            data-target="#manage-task">
-                                                            <i class="far fa-list-alt"></i>
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
                                                         </a>
                                                     </th>
+                                                    <td>1301200001</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Module 2</th>
-                                                    <td>2</td>
-                                                    <td>5</td>
-                                                    <td>6</td>
-                                                    <td>6</td>
-                                                    <th>
+                                                    <th scope="row">
                                                         <a href="#" class="action">
-                                                            <i class="fas fa-plus-square"></i>
+                                                            <i class="fas fa-exchange-alt"></i>
                                                         </a>
+                                                    </th>
+                                                    <td>1301200002</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
-                                                    </th>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
                                                 </tr>
-
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200003</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200004</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200005</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200002</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200003</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200004</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200005</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200002</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200003</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200004</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200005</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200002</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200003</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200004</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">
+                                                        <a href="#" class="action">
+                                                            <i class="fas fa-exchange-alt"></i>
+                                                        </a>
+                                                    </th>
+                                                    <td>1301200005</td>
+                                                    <td>Suryo</td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="number" class="form-control" name="tes-awal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="jurnal">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <form>
+                                                            <div class="form-group form-nilai">
+                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                            </div>
+                                                        </form>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="action">
+                                                            <i class="far fa-list-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
+                                                            <i class="fas fa-paperclip"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -242,43 +904,20 @@
     <!-- End of Page Wrapper -->
 
     <!-- Modal -->
-    <div class="modal fade" id="manage-task" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="manage-attachment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Manage module 1</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Attachment</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Add -->
-    <div class="modal fade" id="add-task" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add task module 1</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <ul>
+                        <li><a href="#">1301200001_Jurnal</a></li>
+                        <li><a href="#">1301200001_TesAkhir</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -300,7 +939,6 @@
     <script src="/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="/vendor/CellEdit/js/dataTables.cellEdit.js"></script>
     <!-- <script src="/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="/vendor/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="/js/demo/datatables-demo.js"></script> -->
@@ -365,13 +1003,6 @@
     <script>
         $(document).ready(function () {
             var table = $("#dataTable").DataTable();
-            table.MakeCellsEditable({
-                "onUpdate": (updatedCell, updatedRow, oldValue) => {
-                    console.log("The new value for the cell is: " + updatedCell.data());
-                    console.log("The old value for that cell was: " + oldValue);
-                    console.log("The values for each cell in that row are: " + updatedRow.data());
-                }, 'columns': [1, 2, 3, 4]
-            });
         });
 
     </script>

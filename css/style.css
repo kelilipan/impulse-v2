@@ -34,15 +34,36 @@
   background-position: center bottom -20px;
   background-size: 100%;
 }
+.form-nilai{
+  display: flex;
+  justify-content: center;
+}
+.form-nilai>input{
+  width: 3em;
+}
+.card-list{
+  display: flex;
+  padding: 1em;
+}
+.chooser{
+  margin: 0 1em;
+}
+.manage-attachment .modal-body{
+  display: block;
+}
 
 @media (max-width: 992px) {
   .bg-login {
     background-size: 100%;
   }
 }
-.navbar-brand img {
-  width: auto;
-  max-height: 50px;
+@media (max-width:500px){
+  .card-list{
+    display: block;
+  }
+  .chooser{
+    margin: 1em;
+  }
 }
 .btn {
   border-radius: 3px;
