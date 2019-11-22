@@ -51,6 +51,11 @@
             transition: 0.2s all ease;
             background-color: #cecece;
         }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+          -webkit-appearance: none; 
+          margin: 0; 
+        }
     </style>
 </head>
 
@@ -65,7 +70,7 @@
             <!-- Sidebar - Brand -->
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                href="/pages/asprak_dashboard.html">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+                href="/pages/asprak_dashboard.html">
                 <img src="/img/logo.png" alt="logo" class="w-100">
             </a>
             <!-- Divider -->
@@ -158,7 +163,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg-7">
+                        <div class="col">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3">
@@ -215,12 +220,12 @@
                                             <thead>
                                                 <tr style="text-align: center;">
                                                     <th scope="col">Action</th>
-                                                    <th scope="col">Praktikan</th>
+                                                    <th scope="col">Participant</th>
                                                     <th scope="col">Assistant</th>
-                                                    <th scope="col">Tes Awal</th>
-                                                    <th scope="col">Jurnal</th>
-                                                    <th scope="col">Tes Akhir</th>
-                                                    <th scope="col">Jawaban</th>
+                                                    <th scope="col">Pre Test</th>
+                                                    <th scope="col">Journal</th>
+                                                    <th scope="col">Post Test</th>
+                                                    <th scope="col">Answer</th>
 
                                                 </tr>
                                             </thead>
@@ -243,25 +248,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -281,25 +286,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -319,25 +324,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -357,25 +362,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -395,25 +400,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -433,25 +438,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -471,25 +476,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -509,25 +514,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -547,25 +552,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -585,25 +590,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -623,25 +628,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -661,25 +666,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -699,25 +704,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -737,25 +742,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -775,25 +780,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -813,25 +818,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">
@@ -851,25 +856,25 @@
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="jurnal">
+                                                                <input type="number" class="form-control" name="jurnal">
                                                             </div>
                                                         </form>
                                                     </td>
                                                     <td>
                                                         <form>
                                                             <div class="form-group form-nilai">
-                                                                <input type="text" class="form-control" name="tes-akhir">
+                                                                <input type="number" class="form-control" name="tes-akhir">
                                                             </div>
                                                         </form>
                                                     </td>
-                                                    <td>
+                                                    <th>
                                                         <a href="#" class="action">
                                                             <i class="far fa-list-alt"></i>
                                                         </a>
                                                         <a href="#" class="action" data-toggle="modal" data-target="#manage-attachment">
                                                             <i class="fas fa-paperclip"></i>
                                                         </a>
-                                                    </td>
+                                                    </th>
                                                 </tr>
                                             </tbody>
                                         </table>
