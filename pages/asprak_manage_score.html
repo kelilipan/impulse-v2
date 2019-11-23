@@ -14,9 +14,7 @@
     <!-- Custom fonts for this template-->
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
@@ -51,10 +49,11 @@
             transition: 0.2s all ease;
             background-color: #cecece;
         }
-        input[type=number]::-webkit-inner-spin-button, 
-        input[type=number]::-webkit-outer-spin-button { 
-          -webkit-appearance: none; 
-          margin: 0; 
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
     </style>
 </head>
@@ -69,8 +68,7 @@
 
             <!-- Sidebar - Brand -->
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                href="/pages/asprak_dashboard.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/pages/asprak_dashboard.html">
                 <img src="/img/logo.png" alt="logo" class="w-100">
             </a>
             <!-- Divider -->
@@ -135,14 +133,11 @@
 
                             <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-inline text-gray-800 name">Febbihun</span><i
-                                    class="fas fa-chevron-down"></i>
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-inline text-gray-800 name">Febbihun</span><i class="fas fa-chevron-down"></i>
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
@@ -172,45 +167,135 @@
                                 <!-- Card Body -->
                                 <div class="card-list">
                                     <div class="chooser">
-                                        <select class="form-control">
-                                            <option>Modul 1</option>
-                                            <option>Modul 2</option>
-                                            <option>Modul 3</option>
-                                            <option>Modul 4</option>
-                                            <option>Modul 5</option>
-                                            <option>Modul 6</option>
-                                            <option>Modul 7</option>
-                                            <option>Modul 8</option>
-                                            <option>Modul 9</option>
-                                            <option>Modul 10</option>
-                                        </select>
+                                        <div class="mdc-select w-100">
+                                            <div class="mdc-select__anchor demo-width-class w-100">
+                                                <i class="mdc-select__dropdown-icon"></i>
+                                                <div class="mdc-select__selected-text"> </div>
+                                                <span class="mdc-floating-label mdc-floating-label--float-above">Module</span>
+                                                <div class="mdc-line-ripple"></div>
+                                            </div>
+
+                                            <div class="mdc-select__menu demo-width-class mdc-menu mdc-menu-surface">
+                                                <ul class="mdc-list">
+                                                    <li class="mdc-list-item" data-value="0">Running Module</li>
+                                                    <li class="mdc-list-item" data-value="1">
+                                                        Module 1
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="2">
+                                                        Module 2
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="3">
+                                                        Module 3
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="4">
+                                                        Module 4
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="5">
+                                                        Module 5
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="6">
+                                                        Module 6
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="7">
+                                                        Module 7
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="8">
+                                                        Module 8
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="9">
+                                                        Module 9
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="10">
+                                                        Module 10
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="chooser">
-                                        <select class="form-control">
-                                            <option>Senin</option>
-                                            <option>Selasa</option>
-                                            <option>Rabu</option>
-                                            <option>Kamis</option>
-                                            <option>Jumat</option>
-                                            <option>Sabtu</option>
-                                        </select>
+                                        <div class="mdc-select w-100">
+                                            <div class="mdc-select__anchor demo-width-class w-100">
+                                                <i class="mdc-select__dropdown-icon"></i>
+                                                <div class="mdc-select__selected-text"> </div>
+                                                <span class="mdc-floating-label mdc-floating-label--float-above">Day</span>
+                                                <div class="mdc-line-ripple"></div>
+                                            </div>
+
+                                            <div class="mdc-select__menu demo-width-class mdc-menu mdc-menu-surface">
+                                                <ul class="mdc-list">
+                                                    <li class="mdc-list-item" data-value="0">
+                                                        Monday
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="1">
+                                                        Tuesday
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="2">
+                                                        Wednesday
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="3">
+                                                        Thursday
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="4">
+                                                        Friday
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="5">
+                                                        Saturday
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="chooser">
-                                        <select class="form-control">
-                                            <option>IF-41-01</option>
-                                            <option>IF-41-02</option>
-                                            <option>IF-41-03</option>
-                                            <option>IF-41-04</option>
-                                            <option>IF-41-05</option>
-                                            <option>IF-41-06</option>
-                                            <option>IF-41-07</option>
-                                            <option>IF-41-08</option>
-                                            <option>IF-41-09</option>
-                                            <option>IF-41-10</option>
-                                            <option>IF-41-11</option>
-                                            <option>IF-41-12</option>
-                                            <option>IF-41-INT1</option>
-                                        </select>
+                                        <div class="mdc-select w-100">
+                                            <div class="mdc-select__anchor demo-width-class w-100">
+                                                <i class="mdc-select__dropdown-icon"></i>
+                                                <div class="mdc-select__selected-text"> </div>
+                                                <span class="mdc-floating-label mdc-floating-label--float-above">Class</span>
+                                                <div class="mdc-line-ripple"></div>
+                                            </div>
+
+                                            <div class="mdc-select__menu demo-width-class mdc-menu mdc-menu-surface">
+                                                <ul class="mdc-list">
+                                                    <li class="mdc-list-item" data-value="0">IF 41 01</li>
+                                                    <li class="mdc-list-item" data-value="1">
+                                                        IF 41 02
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="2">
+                                                        IF 41 03
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="3">
+                                                        IF 41 04
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="4">
+                                                        IF 41 05
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="5">
+                                                        IF 41 06
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="6">
+                                                        IF 41 07
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="7">
+                                                        IF 41 08
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="8">
+                                                        IF 41 09
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="9">
+                                                        IF 41 10
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="10">
+                                                        IF 41 11
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="10">
+                                                        IF 41 12
+                                                    </li>
+                                                    <li class="mdc-list-item" data-value="10">
+                                                        IF 41 INT1
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
