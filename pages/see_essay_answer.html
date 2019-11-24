@@ -18,6 +18,7 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <link rel="stylesheet" href="/css/style.css">
 
@@ -31,39 +32,26 @@
 </head>
 
 <body id="page-top">
-
-    <!-- Page Wrapper -->
     <div id="wrapper">
-
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-white sidebar accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/index.html">
+        <ul class="navbar-nav bg-white sidebar accordion " id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/pages/asprak_dashboard.html">
                 <img src="/img/logo.png" alt="logo" class="w-100">
             </a>
-            <!-- Divider -->
             <hr class="sidebar-divider mt-1">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="/index.html">
+            <li class="nav-item">
+                <a class="nav-link" href="/pages/asprak_dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
-            <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="/pages/start_practicum.html">
-                    <i class="far fa-play-circle"></i>
-                    <span>Start practicum</span></a>
+                <a class="nav-link" href="/pages/asprak_task_input.html">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>Task input</span></a>
             </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="/pages/submission.html">
+            <li class="nav-item active">
+                <a class="nav-link" href="/pages/asprak_manage_score.html">
                     <i class="fas fa-tasks"></i>
-                    <span>Submission</span></a>
+                    <span>Manage score</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/pages/about.html">
@@ -75,37 +63,25 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
         </ul>
-        <!-- End of Sidebar -->
 
-        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
-            <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
                     <b>Server time : <span id="time"></span></b>
 
-                    <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-
                             <div class="topbar-divider d-none d-sm-block"></div>
-
-                            <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-inline text-gray-800 name">Febbihun</span><i class="fas fa-chevron-down"></i>
                             </a>
-                            <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -118,150 +94,109 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
-
                 </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Journal</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Answer of 13012000xx</h1>
                     </div>
                     <div class="row">
-                        <!-- Area Chart -->
                         <div class="col">
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
                                     <h6 class="m-0 font-weight-bold text-primary">Number 1</h6>
-
+                                    <h6 class="m-0 font-weight-bold text-success">5 Point</h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="d-block justify-content-start">
-                                        <div class="row justify-content-between">
-                                            <div class="col-lg-9 box-soal">
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non esse mollitia beatae quas doloribus ex ipsam laborum veniam officiis in eligendi voluptate eaque, veritatis dolor voluptatem vero cumque sapiente? Sed.
-                                            </div>
-                                            <div class="col-lg-2 card text-center attachment" style="width:200px; margin-right: 1em;">
-                                                <div class="card-body d-flex flex-column">
-                                                    <i class="fas fa-paperclip" style="font-size: 2em;"></i>
-                                                    <a href="#" class="stretched-link">nb-project.zip</a>
-                                                </div>
-                                            </div>
+                                        <div class="box-soal">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non esse mollitia beatae quas doloribus ex ipsam laborum veniam officiis in eligendi voluptate eaque, veritatis dolor voluptatem vero cumque sapiente? Sed.
                                         </div>
                                         <div class="answer-area mt-3">
                                             <label>Answer :</label>
-                                            <textarea class="form-control" id="" rows="5"></textarea>
+                                            <textarea class="form-control" rows="5" disabled>Ini adalah jawaban utnuke nawn onwoai naoiwniofnjasdn wfo nawhfbiawhe nepihg pan pnwgpn 82rnnaov newinapfnawpf no</textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
                                     <h6 class="m-0 font-weight-bold text-primary">Number 2</h6>
+                                    <h6 class="m-0 font-weight-bold text-success">5 Point</h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="d-block justify-content-start">
-                                        <div class="row justify-content-between">
-                                            <div class="col-lg-9 box-soal">
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non esse mollitia beatae quas doloribus ex ipsam laborum veniam officiis in eligendi voluptate eaque, veritatis dolor voluptatem vero cumque sapiente? Sed.
-                                            </div>
-                                            <div class="col-lg-2 card text-center attachment" style="width:200px; margin-right: 1em;">
-                                                <div class="card-body d-flex flex-column">
-                                                    <i class="fas fa-paperclip" style="font-size: 2em;"></i>
-                                                    <a href="#" class="stretched-link">nb-project.zip</a>
-                                                </div>
-                                            </div>
+                                        <div class="box-soal">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non esse mollitia beatae quas doloribus ex ipsam laborum veniam officiis in eligendi voluptate eaque, veritatis dolor voluptatem vero cumque sapiente? Sed.
                                         </div>
                                         <div class="answer-area mt-3">
                                             <label>Answer :</label>
-                                            <textarea class="form-control" id="" rows="5"></textarea>
+                                            <textarea class="form-control" rows="5" disabled>Ini adalah jawaban utnuke nawn onwoai naoiwniofnjasdn wfo nawhfbiawhe nepihg pan pnwgpn 82rnnaov newinapfnawpf no</textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
                                     <h6 class="m-0 font-weight-bold text-primary">Number 3</h6>
-
+                                    <h6 class="m-0 font-weight-bold text-success">5 Point</h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="d-block justify-content-start">
                                         <div class="box-soal">
                                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non esse mollitia beatae quas doloribus ex ipsam laborum veniam officiis in eligendi voluptate eaque, veritatis dolor voluptatem vero cumque sapiente? Sed.
                                         </div>
-                                        <div class="ml-auto card text-center attachment" style="width:200px">
-                                            <div class="card-body d-flex flex-column">
-                                                <i class="fas fa-paperclip" style="font-size: 2em;"></i>
-
-                                                <a href="#" class="stretched-link">nb-project.zip</a>
-                                            </div>
+                                        <div class="answer-area mt-3">
+                                            <label>Answer :</label>
+                                            <textarea class="form-control" rows="5" disabled>Ini adalah jawaban utnuke nawn onwoai naoiwniofnjasdn wfo nawhfbiawhe nepihg pan pnwgpn 82rnnaov newinapfnawpf no</textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
                                     <h6 class="m-0 font-weight-bold text-primary">Number 4</h6>
+                                    <h6 class="m-0 font-weight-bold text-success">5 Point</h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="d-block justify-content-start">
                                         <div class="box-soal">
                                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non esse mollitia beatae quas doloribus ex ipsam laborum veniam officiis in eligendi voluptate eaque, veritatis dolor voluptatem vero cumque sapiente? Sed.
                                         </div>
-                                        <div class="ml-auto card text-center attachment" style="width:200px">
-                                            <div class="card-body d-flex flex-column">
-                                                <i class="fas fa-paperclip" style="font-size: 2em;"></i>
-
-                                                <a href="#" class="stretched-link">nb-project.zip</a>
-                                            </div>
+                                        <div class="answer-area mt-3">
+                                            <label>Answer :</label>
+                                            <textarea class="form-control" rows="5" disabled>Ini adalah jawaban utnuke nawn onwoai naoiwniofnjasdn wfo nawhfbiawhe nepihg pan pnwgpn 82rnnaov newinapfnawpf no</textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
                                     <h6 class="m-0 font-weight-bold text-primary">Number 5</h6>
-
+                                    <h6 class="m-0 font-weight-bold text-success">5 Point</h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="d-block justify-content-start">
                                         <div class="box-soal">
                                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non esse mollitia beatae quas doloribus ex ipsam laborum veniam officiis in eligendi voluptate eaque, veritatis dolor voluptatem vero cumque sapiente? Sed.
                                         </div>
-                                        <div class="ml-auto card text-center attachment" style="width:200px">
-                                            <div class="card-body d-flex flex-column">
-                                                <i class="fas fa-paperclip" style="font-size: 2em;"></i>
-
-                                                <a href="#" class="stretched-link">nb-project.zip</a>
-                                            </div>
+                                        <div class="answer-area mt-3">
+                                            <label>Answer :</label>
+                                            <textarea class="form-control" rows="5" disabled>Ini adalah jawaban utnuke nawn onwoai naoiwniofnjasdn wfo nawhfbiawhe nepihg pan pnwgpn 82rnnaov newinapfnawpf no</textarea>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex">
-                                <a class="ml-auto btn btn-success" href="upload_jurnal.html">Finish</a>
+                                <a href="#" class="ml-auto btn btn-success mb-3">Done</a>
                             </div>
                         </div>
-                        <!-- /.container-fluid -->
                     </div>
-
                 </div>
-
             </div>
 
+            <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -293,6 +228,11 @@
     <!-- Custom scripts for all pages-->
     <script src="/js/sb-admin-2.min.js"></script>
 
+    <!-- Page level plugins -->
+    <script src="/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/js/demo/chart-area-demo.js"></script>
     <script>
         function startTime() {
             var today = new Date();
@@ -312,7 +252,13 @@
         $(document).ready(() => {
             startTime()
         })
+        const MDCSelect = mdc.select.MDCSelect
 
+        const select = new MDCSelect(document.querySelector('.mdc-select'));
+
+        select.listen('MDCSelect:change', () => {
+            // alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
+        });
         $('#logout-btn').click(() => {
             Swal.fire({
                 title: 'Are you sure?',
