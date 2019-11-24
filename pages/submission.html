@@ -19,9 +19,9 @@
 
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
@@ -127,9 +127,9 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <h1 class="h3 mb-0 text-gray-800">Submission</h1>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
 
@@ -137,29 +137,28 @@
                     <div class="row">
 
                         <!-- Area Chart -->
-                        <div class="col">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
-                                    <h6 class="m-0 font-weight-bold text-primary">Score Overview</h6>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card shadow mb-3">
+                                    <!-- Card Header - Dropdown -->
+                                    <div
+                                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
+                                        <h6 class="m-0 font-weight-bold text-primary">Form Upload</h6>
 
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-start">
-                                        <div class="mdc-select mdc-select--outlined demo-enhanced-select ">
-                                            <div class="mdc-select__anchor custom-enhanced-select-width"><i
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mdc-select mdc-select--outlined demo-enhanced-select w-100 mb-3">
+                                            <div class="mdc-select__anchor custom-enhanced-select-width w-100"><i
                                                     class="mdc-select__dropdown-icon"></i>
                                                 <div id="demo-selected-text" class="mdc-select__selected-text"
-                                                    tabindex="0" aria-disabled="false" aria-expanded="false">OOP</div>
+                                                    tabindex="0" aria-disabled="false" aria-expanded="false"></div>
                                                 <div
                                                     class="mdc-notched-outline mdc-notched-outline--upgraded mdc-notched-outline--notched">
                                                     <div class="mdc-notched-outline__leading"></div>
                                                     <div class="mdc-notched-outline__notch" style="width: 32.75px;">
                                                         <label id="outlined-label"
-                                                            class="mdc-floating-label mdc-floating-label--float-above">Subject</label>
-                                                    </div>
+                                                            class="mdc-floating-label mdc-floating-label--float-above">Modul
+                                                            Practican</label></div>
                                                     <div class="mdc-notched-outline__trailing"></div>
                                                 </div>
                                             </div>
@@ -167,53 +166,105 @@
                                                 style="transform-origin: center top; left: 0px; top: 56px; max-height: 336.219px;">
                                                 <ul class="mdc-list">
                                                     <li data-value="apple" aria-selected="false" role="option"
-                                                        class="mdc-list-item" tabindex="-1">
-                                                        Apple</li>
+                                                        class="mdc-list-item mdc-list-item--selected" tabindex="-1">
+                                                        Modul 1</li>
+                                                    <li data-value="apple" aria-selected="false" role="option"
+                                                        class="mdc-list-item" tabindex="-1">Modul 2</li>
                                                     <li data-value="orange" aria-selected="true" role="option"
-                                                        class="mdc-list-item mdc-list-item--selected" tabindex="-1">OOP
-                                                    </li>
+                                                        class="mdc-list-item" tabindex="-1">Modul 3</li>
                                                     <li data-value="banana" aria-selected="false" role="option"
-                                                        class="mdc-list-item" tabindex="-1">
-                                                        Banana</li>
+                                                        class="mdc-list-item" tabindex="-1">Modul 4</li>
+                                                    <li data-value="apple" aria-selected="false" role="option"
+                                                        class="mdc-list-item" tabindex="-1">Modul 5</li>
                                                 </ul>
                                             </div>
                                         </div>
+                                        <div class="mdc-select mdc-select--outlined demo-enhanced-select w-100 mb-3">
+                                            <div class="mdc-select__anchor custom-enhanced-select-width w-100"><i
+                                                    class="mdc-select__dropdown-icon"></i>
+                                                <div id="demo-selected-text" class="mdc-select__selected-text"
+                                                    tabindex="0" aria-disabled="false" aria-expanded="false"></div>
+                                                <div
+                                                    class="mdc-notched-outline mdc-notched-outline--upgraded mdc-notched-outline--notched">
+                                                    <div class="mdc-notched-outline__leading"></div>
+                                                    <div class="mdc-notched-outline__notch" style="width: 32.75px;">
+                                                        <label id="outlined-label"
+                                                            class="mdc-floating-label mdc-floating-label--float-above">Test
+                                                            Type</label></div>
+                                                    <div class="mdc-notched-outline__trailing"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mdc-select__menu mdc-menu mdc-menu-surface demo-enhanced-select custom-enhanced-select-width"
+                                                style="transform-origin: center top; left: 0px; top: 56px; max-height: 336.219px;">
+                                                <ul class="mdc-list">
+                                                    <li data-value="apple" aria-selected="false" role="option"
+                                                        class="mdc-list-item mdc-list-item--selected" tabindex="-1">
+                                                        Tes Awal</li>
+                                                    <li data-value="apple" aria-selected="false" role="option"
+                                                        class="mdc-list-item" tabindex="-1">Jurnal</li>
+                                                    <li data-value="orange" aria-selected="true" role="option"
+                                                        class="mdc-list-item" tabindex="-1">Tes Akhir</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="input-group mb-3">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                    aria-describedby="inputGroupFileAddon01">
+                                                <label class="custom-file-label" for="inputGroupFile01">Choose
+                                                    file</label>
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <button class="ml-auto btn btn-primary">Upload</button>
+                                        </div>
                                     </div>
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
+                                </div>
+                                <div class="col">
                                 </div>
                             </div>
                         </div>
-
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <div class="col mb-4">
-
-                            <!-- Illustrations -->
+                        <div class="col">
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Task/news</h6>
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between flex-wrap">
+                                    <h6 class="m-0 font-weight-bold text-primary">Upload History</h6>
+
                                 </div>
+                                <!-- Card Body -->
                                 <div class="card-body">
-                                    <!-- start feedwind code -->
-                                    <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js"
-                                        data-fw-param="120197/"></script> <!-- end feedwind code -->
+                                    <div class="table-responsive ">
+                                        <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">No</th>
+                                                    <th scope="col">Modul</th>
+                                                    <th scope="col">Test Type</th>
+                                                    <th scope="col">Date And Time</th>
+                                                    <th scope="col">Download</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Modul 1</td>
+                                                    <td>Tes Akhir</td>
+                                                    <td>2019-18-19 11:47:01</td>
+                                                    <td><button class="btn btn-sm btn-success">Download</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
-                <!-- /.container-fluid -->
 
+                <!-- End of Main Content -->
             </div>
-            <!-- End of Main Content -->
-
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -247,10 +298,8 @@
     <script src="/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="/vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="/js/demo/chart-area-demo.js"></script>
     <script>
         function startTime() {
             var today = new Date();
@@ -271,12 +320,10 @@
             startTime()
         })
         const MDCSelect = mdc.select.MDCSelect
-
-        const select = new MDCSelect(document.querySelector('.mdc-select'));
-
-        select.listen('MDCSelect:change', () => {
-            // alert(`Selected option at index ${select.selectedIndex} with value "${select.value}"`);
+        const select = [].map.call(document.querySelectorAll('.mdc-select'), function (el) {
+            return new MDCSelect(el);
         });
+
         $('#logout-btn').click(() => {
             Swal.fire({
                 title: 'Are you sure?',
@@ -292,6 +339,7 @@
                 }
             })
         })
+
     </script>
 
 </body>
