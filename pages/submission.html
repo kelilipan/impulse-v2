@@ -251,8 +251,7 @@
                                                     <td>Modul 1</td>
                                                     <td>Tes Akhir</td>
                                                     <td>2019-18-19 11:47:01</td>
-                                                    <td><button id='btn-down'
-                                                            class="btn btn-sm btn-success">Download</button>
+                                                    <td><button class="btn btn-sm btn-success">Download</button>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -340,21 +339,7 @@
                 }
             })
         })
-        $('#btn-down').click(() => {
-            Swal.fire({
-                title: 'Are you sure?',
-                // text: "You won't be able to revert this!",
-                icon: 'question',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, download file'
-            }).then((result) => {
-                if (result.value) {
-                    window.location = "/pages/submission.html";
-                }
-            })
-        })
+
     </script>
 
 </body>
