@@ -43,7 +43,7 @@
 }
 .card-list{
   display: flex;
-  padding: 1em;
+  margin: 1em 0 !important;
 }
 .chooser{
   margin: 0 1em;
