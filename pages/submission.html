@@ -261,102 +261,101 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
-                    <!-- End of Main Content -->
-
-                    <!-- Footer -->
-                    <footer class="sticky-footer bg-white fixed-bottom">
-                        <div class="container my-auto">
-                            <div class="copyright text-center my-auto">
-                                <span>Copyright &copy; Your Website 2019</span>
-                            </div>
-                        </div>
-                    </footer>
-                    <!-- End of Footer -->
-
                 </div>
-                <!-- End of Content Wrapper -->
 
+                <!-- End of Main Content -->
             </div>
-            <!-- End of Page Wrapper -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2019</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
 
-            <!-- Scroll to Top Button-->
-            <a class="scroll-to-top rounded" href="#page-top">
-                <i class="fas fa-angle-up"></i>
-            </a>
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
 
-            <!-- Bootstrap core JavaScript-->
-            <script src="/vendor/jquery/jquery.min.js"></script>
-            <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-            <!-- Core plugin JavaScript-->
-            <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-            <!-- Custom scripts for all pages-->
-            <script src="/js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
 
-            <!-- Page level plugins -->
+    <!-- Page level plugins -->
 
-            <!-- Page level custom scripts -->
-            <script>
-                function startTime() {
-                    var today = new Date();
-                    var h = today.getHours();
-                    var m = today.getMinutes();
-                    var s = today.getSeconds();
-                    m = checkTime(m);
-                    s = checkTime(s);
-                    document.getElementById('time').innerHTML =
-                        h + ":" + m + ":" + s;
-                    var t = setTimeout(startTime, 500);
+    <!-- Page level custom scripts -->
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('time').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+        $(document).ready(() => {
+            startTime()
+        })
+        const MDCSelect = mdc.select.MDCSelect
+        const select = [].map.call(document.querySelectorAll('.mdc-select'), function (el) {
+            return new MDCSelect(el);
+        });
+
+        $('#logout-btn').click(() => {
+            Swal.fire({
+                title: 'Are you sure?',
+                // text: "You won't be able to revert this!",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, logout!'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = "/login.html";
                 }
-                function checkTime(i) {
-                    if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
-                    return i;
+            })
+        })
+        $('#btn-down').click(() => {
+            Swal.fire({
+                title: 'Are you sure?',
+                // text: "You won't be able to revert this!",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, download file'
+            }).then((result) => {
+                if (result.value) {
+                    window.location = "/pages/submission.html";
                 }
-                $(document).ready(() => {
-                    startTime()
-                })
-                const MDCSelect = mdc.select.MDCSelect
-                const select = [].map.call(document.querySelectorAll('.mdc-select'), function (el) {
-                    return new MDCSelect(el);
-                });
-
-                $('#logout-btn').click(() => {
-                    Swal.fire({
-                        title: 'Are you sure?',
-                        // text: "You won't be able to revert this!",
-                        icon: 'question',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, logout!'
-                    }).then((result) => {
-                        if (result.value) {
-                            window.location = "/login.html";
-                        }
-                    })
-                })
-                $('#btn-down').click(() => {
-                    Swal.fire({
-                        title: 'Are you sure?',
-                        // text: "You won't be able to revert this!",
-                        icon: 'question',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, download file'
-                    }).then((result) => {
-                        if (result.value) {
-                            window.location = "/pages/submission.html";
-                        }
-                    })
-                })
-            </script>
+            })
+        })
+    </script>
 
 </body>
 
