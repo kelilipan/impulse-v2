@@ -40,6 +40,10 @@
             text-align: center;
             vertical-align: middle !important;
         }
+
+        label {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
@@ -382,11 +386,31 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <h6 class="text-gray-700">Type :</h6>
+                    <div class="mdc-form-field">
+                        <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
+                            <div class="mdc-radio__background">
+                                <div class="mdc-radio__outer-circle"></div>
+                                <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                            <div class="mdc-radio__ripple"></div>
+                        </div>
+                        <label for="radio-1">Multiple choice</label>
+                        <div class="mdc-radio">
+                            <input class="mdc-radio__native-control" type="radio" id="radio-1" name="radios" checked>
+                            <div class="mdc-radio__background">
+                                <div class="mdc-radio__outer-circle"></div>
+                                <div class="mdc-radio__inner-circle"></div>
+                            </div>
+                            <div class="mdc-radio__ripple"></div>
+                        </div>
+                        <label for="radio-1">Essay</label>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <a href="/pages/asprak_add_mp.html" class="btn btn-primary">Go</a>
                 </div>
             </div>
         </div>
@@ -455,6 +479,10 @@
         const select = [].map.call(document.querySelectorAll('.mdc-select'), function (el) {
             return new MDCSelect(el);
         })
+
+        const radio = new MDCRadio(document.querySelector('.mdc-radio'));
+        const formField = new MDCFormField(document.querySelector('.mdc-form-field'));
+        formField.input = radio;
         const MDCTextField = mdc.textField.MDCTextField
         const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
             return new MDCTextField(el);
