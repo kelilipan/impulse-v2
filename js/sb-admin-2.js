@@ -14,6 +14,7 @@
   $(window).resize(function() {
     if ($(window).width() < 768) {
       $(".sidebar .collapse").collapse("hide");
+      $(".sidebar").toggleClass("toggled");
     }
   });
   // toggle sidebar
