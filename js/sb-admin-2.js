@@ -14,8 +14,11 @@
   $(window).resize(function() {
     if ($(window).width() < 768) {
       $(".sidebar .collapse").collapse("hide");
-      $(".sidebar").toggleClass("toggled");
+      // $(".sidebar").toggleClass("toggled");
     }
+  });
+  $(window).on("resize", function() {
+    $(".sidebar").toggleClass("toggled", $(window).width() < 768);
   });
   // toggle sidebar
   $(document).ready(function() {
